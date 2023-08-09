@@ -14,9 +14,8 @@ getLibrary:
 	echo "get the libraries into your area"
 	git clone https://github.com/riscvsi/technology.git
 	echo "point to the cadence library area LIBS directory"
-	read techLoc
+	./gunzipQrc.csh
 	echo "copying the qrc tech files and creating the area"
-	cp ${techLoc}/qx/qrcTechFile technology/45/qx/qrcTechFile
 	echo "libraries copied to main area"
 
 getNetlist: 
