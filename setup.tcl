@@ -1,5 +1,5 @@
 set  designName  "scr1_pipe_top" 
-set  designName  "i2c_master_top" 
+set  designName  "aes_cipher_top" 
 set  technology  "45"
 
 if {$designName == "scr1_pipe_top" } {
@@ -49,6 +49,16 @@ if {$designName == "i2c_master_top" } {
 ../riscvCoreSyntaCore1/ips/design/i2cMasterSlave/verilog/timescale.v "
     set  sdcFile  "../riscvCoreSyntaCore1/ips/design/i2cMasterSlave/constraints/i2c_master_top.sdc" 
 }
+
+
+if {$designName == "aes_cipher_top" } {
+    set  RTLFile  "../riscvCoreSyntaCore1/ips/design/aes_cipher_top/verilog/aes_cipher_top.v \
+../riscvCoreSyntaCore1/ips/design/aes_cipher_top/verilog/aes_key_expand_128.v \
+../riscvCoreSyntaCore1/ips/design/aes_cipher_top/verilog/aes_rcon.v \
+../riscvCoreSyntaCore1/ips/design/aes_cipher_top/verilog/aes_sbox.v "
+    set  sdcFile  "../riscvCoreSyntaCore1/ips/design/aes_cipher_top/constraints/aes_cipher_top.sdc" 
+}
+
 
 
 
