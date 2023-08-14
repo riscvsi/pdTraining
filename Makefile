@@ -43,9 +43,9 @@ pmesh: fpCompleted
 	echo "floorplan completed starting power planning"
 	echo "innovus -stylus -file scripts/innovus/power_stripe.tcl"
 	$(pnrTool) -file scripts/innovus/power_stripe.tcl
-	touch pmesh
+	touch pmeshCompleted
 
-place: pmesh
+place: pmeshCompleted
 	echo "power mesh completed starting placement"
 	echo "innovus -stylus -file scripts/innovus/placement.tcl"
 	$(pnrTool) -file scripts/innovus/placement.tcl
@@ -82,7 +82,7 @@ gterminal:
 all: synth fp pmesh place cts route
 
 clean:
-	rm pvsUI_ipvs.log fpCompleted synthCompleted placementCompleted ctsCompleted routeCompleted innovus.log* innovus.cmd* genus.log* genus.cmd*
+	rm pvsUI_ipvs.log synthCompleted fpCompleted pmeshCompleted placeCompleted ctsCompleted routeCompleted innovus.log* innovus.cmd* genus.log* genus.cmd*
 
 
 #######################
