@@ -1,5 +1,5 @@
 set  designName  "scr1_pipe_top" 
-set  designName  "ethmac" 
+set  designName  "i2c_master_top" 
 set  technology  "45"
 
 if {$designName == "scr1_pipe_top" } {
@@ -8,7 +8,7 @@ if {$designName == "scr1_pipe_top" } {
 }
 
 
-if {$designName == "ethernet" } {
+if {$designName == "ethmac" } {
     set  RTLFile  "../riscvCoreSyntaCore1/ips/design/ethernet/verilog/eth_clockgen.v \
     ../riscvCoreSyntaCore1/ips/design/ethernet/verilog/eth_cop.v \
     ../riscvCoreSyntaCore1/ips/design/ethernet/verilog/eth_crc.v \
@@ -39,6 +39,17 @@ if {$designName == "ethernet" } {
     ../riscvCoreSyntaCore1/ips/design/ethernet/verilog/xilinx_dist_ram_16x32.v "
     set  sdcFile  "../riscvCoreSyntaCore1/ips/design/ethernet/constraints/ethmac.sdc" 
 }
+
+
+if {$designName == "i2c_master_top" } {
+    set  RTLFile  "../riscvCoreSyntaCore1/ips/design/i2cMasterSlave/verilog/i2c_master_bit_ctrl.v \
+../riscvCoreSyntaCore1/ips/design/i2cMasterSlave/verilog/i2c_master_byte_ctrl.v \
+../riscvCoreSyntaCore1/ips/design/i2cMasterSlave/verilog/i2c_master_defines.v \
+../riscvCoreSyntaCore1/ips/design/i2cMasterSlave/verilog/i2c_master_top.v \
+../riscvCoreSyntaCore1/ips/design/i2cMasterSlave/verilog/timescale.v "
+    set  sdcFile  "../riscvCoreSyntaCore1/ips/design/i2cMasterSlave/constraints/i2c_master_top.sdc" 
+}
+
 
 
 set  effort  "medium" 
