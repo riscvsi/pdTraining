@@ -74,7 +74,11 @@ read_physical -lef $lefFiles
 ## 
 
 
-set_db / .lp_insert_clock_gating true 
+
+
+
+### clock gating variable
+#set_db / .lp_insert_clock_gating true 
 
 ## Power root attributes
 #set_db / .lp_clock_gating_prefix <string>
@@ -82,8 +86,9 @@ set_db / .lp_insert_clock_gating true
 #set_db / .lp_power_unit mW 
 #set_db / .lp_toggle_rate_unit /ns 
 ## The attribute has been set to default value "medium"
+
 ## you can try setting it to high to explore MVT QoR for low power optimization
-set_db / .leakage_power_effort medium 
+#set_db / .leakage_power_effort medium 
 
 
 ####################################################################
@@ -228,6 +233,7 @@ write_do_lec -revised_design fv_map -logfile ${_LOG_PATH}/rtl2intermediate.lec.l
 ##set_db / .remove_assigns true 
 ##set_remove_assign_options -buffer_or_inverter <libcell> -design <design|subdesign> 
 ##set_db / .use_tiehilo_for_const <none|duplicate|unique> 
+
 set_db / .syn_opt_effort $MAP_OPT_EFF
 syn_opt
 write_snapshot -outdir $_REPORTS_PATH -tag syn_opt
