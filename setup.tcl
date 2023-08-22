@@ -1,5 +1,5 @@
 set  designName  "scr1_pipe_top" 
-set  designName  "aes_cipher_top" 
+#set  designName  "aes_cipher_top" 
 set  technology  "45"
 
 if {$designName == "scr1_pipe_top" } {
