@@ -42,7 +42,7 @@ read_mmmc $init_mmmc_file
 
 
 if {$designName == "scr1_pipe_top"} {
-    lappend lefFiles ../riscvCoreSyntaCore1/ramInputs/sram_32_1024.lef
+    lappend lefFiles ../riscvCoreSyntaCore1/ramInputs/sram_32_1024.lef.bak
     lappend lefFiles ../riscvCoreSyntaCore1/ramInputs/i2c_top.lef
     lappend lefFiles ../riscvCoreSyntaCore1/ramInputs/uart.lef
 }
