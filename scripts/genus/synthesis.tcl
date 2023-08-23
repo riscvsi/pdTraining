@@ -271,6 +271,7 @@ write_power_intent -1801 -base_name ${_OUTPUTS_PATH}/${DESIGN}_synth
 ### write_do_lec
 #################################
 
+report_metric  -format html -file $_REPORTS_PATH/report.html
 
 write_do_lec -golden_design fv_map -revised_design ${_OUTPUTS_PATH}/${DESIGN}_m.v -logfile  ${_LOG_PATH}/intermediate2final.lec.log > ${_OUTPUTS_PATH}/intermediate2final.lec.do
 ##Uncomment if the RTL is to be compared with the final netlist..
