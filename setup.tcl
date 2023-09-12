@@ -2,6 +2,86 @@ set  designName  "scr1_pipe_top"
 #set  designName  "aes_cipher_top" 
 set  technology  "45"
 
+
+if {$designName == "videoController" } {
+    set  RTLFile  "../riscvCoreSyntaCore1/ips/design/videoController/design/Beha_BitStream_ram.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/BitStream_buffer.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/BitStream_controller.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/bitstream_gclk_gen.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/BitStream_parser_FSM_gating.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/bs_decoding.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/cavlc_consumed_bits_decoding.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/cavlc_decoder.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/CodedBlockPattern_decoding.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/dependent_variable_decoding.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/DF_mem_ctrl.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/DF_pipeline.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/DF_reg_ctrl.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/DF_top.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/end_of_blk_decoding.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/exp_golomb_decoding.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/ext_frame_RAM0_wrapper.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/ext_frame_RAM1_wrapper.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/ext_RAM_ctrl.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/heading_one_detector.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/hybrid_pipeline_ctrl.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/Inter_mv_decoding.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/Inter_pred_CPE.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/Inter_pred_LPE.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/Inter_pred_pipeline.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/Inter_pred_reg_ctrl.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/Inter_pred_sliding_window.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/Inter_pred_top.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/Intra4x4_PredMode_decoding.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/Intra_pred_PE.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/Intra_pred_pipeline.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/Intra_pred_reg_ctrl.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/Intra_pred_top.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/IQIT.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/level_decoding.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/nC_decoding.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/nova_defines.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/nova_tb.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/NumCoeffTrailingOnes_decoding.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/pc_decoding.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/QP_decoding.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/ram_async_1r_sync_1w.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/ram_sync_1r_sync_1w.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/rec_DF_RAM_ctrl.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/rec_gclk_gen.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/reconstruction.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/run_decoding.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/sum.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/syntax_decoding.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/timescale.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/total_zeros_decoding.v \
+../riscvCoreSyntaCore1/ips/design/videoController/design/videoController.v "
+    set  sdcFile  "../riscvCoreSyntaCore1/ips/design/videoController/constraints/videoController.sdc" 
+}
+
+
+
+if {$designName == "usbf_top" } {
+    set  RTLFile  "../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_crc16.v \
+../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_crc5.v \
+../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_defines.v \
+../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_ep_rf_dummy.v \
+../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_ep_rf.v \
+../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_idma.v \
+../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_mem_arb.v \
+../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_pa.v \
+../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_pd.v \
+../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_pe.v \
+../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_pl.v \
+../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_rf.v \
+../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_top.v \
+../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_utmi_if.v \
+../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_utmi_ls.v \
+../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_wb.v " 
+    set  sdcFile  "../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/constraints/usbf_top.sdc" 
+}
+
+
 if {$designName == "scr1_pipe_top" } {
     set  RTLFile  "../riscvCoreSyntaCore1/src/includes/scr1_ahb.svh ../riscvCoreSyntaCore1/src/includes/scr1_arch_description.svh ../riscvCoreSyntaCore1/src/includes/scr1_arch_types.svh ../riscvCoreSyntaCore1/src/includes/scr1_csr.svh ../riscvCoreSyntaCore1/src/includes/scr1_dm.svh ../riscvCoreSyntaCore1/src/includes/scr1_hdu.svh ../riscvCoreSyntaCore1/src/includes/scr1_ipic.svh ../riscvCoreSyntaCore1/src/includes/scr1_memif.svh ../riscvCoreSyntaCore1/src/includes/scr1_riscv_isa_decoding.svh ../riscvCoreSyntaCore1/src/includes/scr1_scu.svh ../riscvCoreSyntaCore1/src/includes/scr1_search_ms1.svh ../riscvCoreSyntaCore1/src/includes/scr1_tapc.svh ../riscvCoreSyntaCore1/src/includes/scr1_tdu.svh ../riscvCoreSyntaCore1/src/core/pipeline/scr1_pipe_exu.sv ../riscvCoreSyntaCore1/src/core/pipeline/scr1_pipe_ialu.sv ../riscvCoreSyntaCore1/src/core/pipeline/scr1_pipe_idu.sv ../riscvCoreSyntaCore1/src/core/pipeline/scr1_pipe_ifu.sv ../riscvCoreSyntaCore1/src/core/pipeline/scr1_pipe_lsu.sv ../riscvCoreSyntaCore1/src/core/pipeline/scr1_pipe_mprf.sv ../riscvCoreSyntaCore1/src/core/pipeline/scr1_pipe_top.sv ../riscvCoreSyntaCore1/src/core/scr1_core_top.sv" 
     set  sdcFile  "../riscvCoreSyntaCore1/constraints/scr1_pipe_top.sdc" 
