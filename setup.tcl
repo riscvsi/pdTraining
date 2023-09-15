@@ -1,4 +1,4 @@
-set  designName  "scr1_pipe_top" 
+set  designName  "usbh_host" 
 #set  designName  "aes_cipher_top" 
 set  technology  "45"
 
@@ -61,24 +61,14 @@ if {$designName == "videoController" } {
 
 
 
-if {$designName == "usbf_top" } {
-    set  RTLFile  "../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_crc16.v \
-../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_crc5.v \
-../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_defines.v \
-../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_ep_rf_dummy.v \
-../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_ep_rf.v \
-../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_idma.v \
-../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_mem_arb.v \
-../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_pa.v \
-../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_pd.v \
-../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_pe.v \
-../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_pl.v \
-../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_rf.v \
-../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_top.v \
-../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_utmi_if.v \
-../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_utmi_ls.v \
-../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbf_wb.v " 
-    set  sdcFile  "../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/constraints/usbf_top.sdc" 
+if {$designName == "usbh_host" } {
+    set  RTLFile  "../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbh_crc16.v \
+../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbh_crc5.v \
+../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbh_host_defs.v \
+../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbh_fifo.v \
+../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbh_host.v \
+../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/verilog/usbh_sie.v "
+    set  sdcFile  "../riscvCoreSyntaCore1/ips/design/usb2.1FunctionalCore/constraints/usbf_host.sdc" 
 }
 
 
