@@ -1,7 +1,13 @@
-set  designName  "usbh_host" 
+set  designName  "sdram_controller" 
 #set  designName  "aes_cipher_top" 
 set  technology  "45"
 
+
+
+if {$designName == "sdram_controller" } {
+    set  RTLFile  "../riscvCoreSyntaCore1/ips/design/sdram_controller/verilog/sdram.v "
+    set  sdcFile  "../riscvCoreSyntaCore1/ips/design/sdram_controller/constraints/sdc_controller.sdc"
+}
 
 
 if {$designName == "sdc_controller" } {
@@ -18,7 +24,6 @@ if {$designName == "sdc_controller" } {
 ../riscvCoreSyntaCore1/ips/design/sdc_controller/verilog/sd_fifo_rx_filler.v \
 ../riscvCoreSyntaCore1/ips/design/sdc_controller/verilog/sd_fifo_tx_filler.v \
 ../riscvCoreSyntaCore1/ips/design/sdc_controller/verilog/sd_rx_fifo.v \
-../riscvCoreSyntaCore1/ips/design/sdc_controller/verilog/sd_rx_fifo_tb.v \
 ../riscvCoreSyntaCore1/ips/design/sdc_controller/verilog/sd_tx_fifo.v \
 ../riscvCoreSyntaCore1/ips/design/sdc_controller/verilog/sdc_controller.v "
     set  sdcFile  "../riscvCoreSyntaCore1/ips/design/sdc_controller/constraints/sdc_controller.sdc"
