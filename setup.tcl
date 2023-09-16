@@ -3,6 +3,28 @@ set  designName  "usbh_host"
 set  technology  "45"
 
 
+
+if {$designName == "sdc_controller" } {
+    set  RTLFile  "../riscvCoreSyntaCore1/ips/design/sdc_controller/verilog/sd_bd.v \
+../riscvCoreSyntaCore1/ips/design/sdc_controller/verilog/sd_clock_divider.v \
+../riscvCoreSyntaCore1/ips/design/sdc_controller/verilog/sd_cmd_master.v \
+../riscvCoreSyntaCore1/ips/design/sdc_controller/verilog/sd_cmd_serial_host.v \
+../riscvCoreSyntaCore1/ips/design/sdc_controller/verilog/sd_controller_wb.v \
+../riscvCoreSyntaCore1/ips/design/sdc_controller/verilog/sd_crc_16.v \
+../riscvCoreSyntaCore1/ips/design/sdc_controller/verilog/sd_crc_7.v \
+../riscvCoreSyntaCore1/ips/design/sdc_controller/verilog/sd_data_master.v \
+../riscvCoreSyntaCore1/ips/design/sdc_controller/verilog/sd_data_serial_host.v \
+../riscvCoreSyntaCore1/ips/design/sdc_controller/verilog/sd_defines.v \
+../riscvCoreSyntaCore1/ips/design/sdc_controller/verilog/sd_fifo_rx_filler.v \
+../riscvCoreSyntaCore1/ips/design/sdc_controller/verilog/sd_fifo_tx_filler.v \
+../riscvCoreSyntaCore1/ips/design/sdc_controller/verilog/sd_rx_fifo.v \
+../riscvCoreSyntaCore1/ips/design/sdc_controller/verilog/sd_rx_fifo_tb.v \
+../riscvCoreSyntaCore1/ips/design/sdc_controller/verilog/sd_tx_fifo.v \
+../riscvCoreSyntaCore1/ips/design/sdc_controller/verilog/sdc_controller.v "
+    set  sdcFile  "../riscvCoreSyntaCore1/ips/design/sdc_controller/constraints/sdc_controller.sdc"
+}
+
+
 if {$designName == "videoController" } {
     set  RTLFile  "../riscvCoreSyntaCore1/ips/design/videoController/design/Beha_BitStream_ram.v \
 ../riscvCoreSyntaCore1/ips/design/videoController/design/BitStream_buffer.v \
